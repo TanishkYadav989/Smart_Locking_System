@@ -61,7 +61,7 @@ int main(){
     	  case IDLE:  
 			if(!armed && !busy){
 			    busy=false;
-                DISPLAY_LOCK();			
+                DISPLAY_LOCK();	//*Displaying Lock image on the OLED*//		
     		    LOCK_CLOSE();
 			    alerted=false;
 				access=false;
@@ -97,7 +97,7 @@ int main(){
     		    if(count==3){
     		    state = DENIED;
     		    }else{
-					DISPLAY_CROSS();
+					DISPLAY_CROSS(); //*Displaying a cross on the OLED indicating a wrong attempt*//
 					count++;	
     		        UDMA_Tx((uint8_t *)REJ,21);
 					state = WAIT;
@@ -116,7 +116,7 @@ int main(){
     	   case GRANTED:
 			 if(!granted){
 			   busy=false;
-               grant=true;				 
+               grant=true; //*Setting 'grant' triggers the animation of Lock opening with 25-FPS*//				 
     		   OPEN_LOCK();
     		   UDMA_Tx((uint8_t *)ACC,15);
     		   received = false;
@@ -126,7 +126,7 @@ int main(){
 			   granted =true;
 			}
 			if(reload){
-				grant=false;
+				grant=false; //*Resetting to stop the animation & prvent looping back*//
     		    state = IDLE;
 			}
     		break;
@@ -135,21 +135,21 @@ int main(){
 			 if(!alerted){ 
 			    UDMA_Tx((uint8_t *)AL,7);
 				ALERT();
-				alarmed=true;
+				alarmed=true; //*Triggering the Alarm bell inversion animation for visual feedback for an Alert*//
 				delay_hw(15000);
 				alerted=true;
 				count=0;
 				received=false;
 			}
 			if(done){
-			   alarmed=false;	 
+			   alarmed=false; //*Reseting to Stop the Inversion animation*//	 
 			   DISABLE();
 			   state = IDLE;
 			}
     		break;
 //*Triggered by the Reed Switch EXTI, this states activates a high-priority emergency alert if the door is opened without authorization*//			
     	   case BREACH:
-			 alarmed=true;
+			 alarmed=true; //*Triggering the Alarm bell inversion animation for visual feedback for an Alert*//
 			 ALERT();
        	   break;
         }
