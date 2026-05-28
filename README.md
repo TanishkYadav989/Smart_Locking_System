@@ -1,3 +1,5 @@
+
+
 This project is a high-efficiency security system that leverages low-level hardware features to provide secure entry and visual feedback with minimal power consumption.
 
 *Intelligent Power Management*:- Automatically enters a low-power Stop-2 Mode when idle (using RCC & PWR) and resulted in ~60% current reduction in current consumption. LPUART wakes up the system when detects a Start bit at the Rx pin. 
@@ -10,5 +12,9 @@ This project is a high-efficiency security system that leverages low-level hardw
 
 *Real-Time Verification*:- System performance, Current Consumption and Signal timing are validated using Logic Analyzer & Multimeter to ensure reliability in real-world conditions.
 
-*State-Transition Diagram*:-
-![Smart Lock State Machine](Finished%20Product/State%20Machine%20Transition%20Diagram.JPG)
+(*Click the image below to see the full demo*)
+<p align="center">
+  <a href="https://youtu.be/6xeKPMEZ6gM" target="_blank">
+     <img src="https://img.youtube.com/vi/6xeKPMEZ6gM/maxresdefault.jpg" alt="Smart Locking System Demo" width="600" />
+  </a>
+</p>
