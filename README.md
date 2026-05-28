@@ -9,3 +9,5 @@ This project is a high-efficiency security system that leverages low-level hardw
 *Hardware-Level Efficiency*:- Offloads data movement and timing tasks to dedicated hardware controllers (DMA and Timers), ensuring the main "brain/CPU" of the lock is free to handle critical security and state-machine logic.
 
 *Real-Time Verification*:- System performance, Current Consumption and Signal timing are validated using Logic Analyzer & Multimeter to ensure reliability in real-world conditions.
+
+![Smart Lock State Machine](Finished%20Product/State%20Machine%20Transition%20Diagram.JPG)
