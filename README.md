@@ -10,4 +10,5 @@ This project is a high-efficiency security system that leverages low-level hardw
 
 *Real-Time Verification*:- System performance, Current Consumption and Signal timing are validated using Logic Analyzer & Multimeter to ensure reliability in real-world conditions.
 
+*State-Transition Diagram*:-
 ![Smart Lock State Machine](Finished%20Product/State%20Machine%20Transition%20Diagram.JPG)
